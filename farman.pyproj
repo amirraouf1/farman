@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>farman</Name>
+    <RootNamespace>farman</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>1023a40e-b858-42f0-a35f-cd5b0bf7a8ab</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>farman.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\forms.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="common\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="manage.py" />
+    <Compile Include="farman\__init__.py" />
+    <Compile Include="farman\settings.py" />
+    <Compile Include="farman\urls.py" />
+    <Compile Include="farman\wsgi.py" />
+    <Compile Include="personel\admin.py" />
+    <Compile Include="personel\apps.py" />
+    <Compile Include="personel\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="personel\migrations\__init__.py" />
+    <Compile Include="personel\models.py" />
+    <Compile Include="personel\tests.py" />
+    <Compile Include="personel\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="personel\views.py" />
+    <Compile Include="personel\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\staticfiles\" />
+    <Folder Include="app\staticfiles\admin\" />
+    <Folder Include="app\staticfiles\admin\css\" />
+    <Folder Include="app\staticfiles\admin\css\vendor\" />
+    <Folder Include="app\staticfiles\admin\css\vendor\select2\" />
+    <Folder Include="app\staticfiles\admin\img\" />
+    <Folder Include="app\staticfiles\admin\img\gis\" />
+    <Folder Include="app\staticfiles\admin\js\" />
+    <Folder Include="app\staticfiles\admin\js\admin\" />
+    <Folder Include="app\staticfiles\admin\js\vendor\" />
+    <Folder Include="app\staticfiles\admin\js\vendor\jquery\" />
+    <Folder Include="app\staticfiles\admin\js\vendor\select2\" />
+    <Folder Include="app\staticfiles\admin\js\vendor\select2\i18n\" />
+    <Folder Include="app\staticfiles\admin\js\vendor\xregexp\" />
+    <Folder Include="app\staticfiles\app\" />
+    <Folder Include="app\staticfiles\app\css\" />
+    <Folder Include="app\staticfiles\app\fonts\" />
+    <Folder Include="app\staticfiles\app\js\" />
+    <Folder Include="app\staticfiles\persian-datepicker\" />
+    <Folder Include="app\staticfiles\persian-datepicker\css\" />
+    <Folder Include="app\staticfiles\persian-datepicker\js\" />
+    <Folder Include="app\staticfiles\personel\" />
+    <Folder Include="app\staticfiles\personel\css\" />
+    <Folder Include="app\staticfiles\personel\js\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\app\" />
+    <Folder Include="app\static\app\css\" />
+    <Folder Include="app\static\app\fonts\" />
+    <Folder Include="app\static\app\js\" />
+    <Folder Include="app\static\persian-datepicker\" />
+    <Folder Include="app\static\persian-datepicker\css\" />
+    <Folder Include="app\static\persian-datepicker\js\" />
+    <Folder Include="app\static\personel\" />
+    <Folder Include="app\static\personel\css\" />
+    <Folder Include="app\static\personel\js\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="farman\" />
+    <Folder Include="common\" />
+    <Folder Include="template\" />
+    <Folder Include="personel\" />
+    <Folder Include="personel\migrations\" />
+    <Folder Include="personel\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\staticfiles\admin\css\autocomplete.css" />
+    <Content Include="app\staticfiles\admin\css\base.css" />
+    <Content Include="app\staticfiles\admin\css\changelists.css" />
+    <Content Include="app\staticfiles\admin\css\dark_mode.css" />
+    <Content Include="app\staticfiles\admin\css\dashboard.css" />
+    <Content Include="app\staticfiles\admin\css\forms.css" />
+    <Content Include="app\staticfiles\admin\css\login.css" />
+    <Content Include="app\staticfiles\admin\css\nav_sidebar.css" />
+    <Content Include="app\staticfiles\admin\css\responsive.css" />
+    <Content Include="app\staticfiles\admin\css\responsive_rtl.css" />
+    <Content Include="app\staticfiles\admin\css\rtl.css" />
+    <Content Include="app\staticfiles\admin\css\unusable_password_field.css" />
+    <Content Include="app\staticfiles\admin\css\vendor\select2\LICENSE-SELECT2.md" />
+    <Content Include="app\staticfiles\admin\css\vendor\select2\select2.css" />
+    <Content Include="app\staticfiles\admin\css\vendor\select2\select2.min.css" />
+    <Content Include="app\staticfiles\admin\css\widgets.css" />
+    <Content Include="app\staticfiles\admin\img\calendar-icons.svg" />
+    <Content Include="app\staticfiles\admin\img\gis\move_vertex_off.svg" />
+    <Content Include="app\staticfiles\admin\img\gis\move_vertex_on.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-addlink.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-alert.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-calendar.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-changelink.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-clock.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-deletelink.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-hidelink.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-no.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-unknown-alt.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-unknown.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-viewlink.svg" />
+    <Content Include="app\staticfiles\admin\img\icon-yes.svg" />
+    <Content Include="app\staticfiles\admin\img\inline-delete.svg" />
+    <Content Include="app\staticfiles\admin\img\LICENSE" />
+    <Content Include="app\staticfiles\admin\img\README.txt" />
+    <Content Include="app\staticfiles\admin\img\search.svg" />
+    <Content Include="app\staticfiles\admin\img\selector-icons.svg" />
+    <Content Include="app\staticfiles\admin\img\sorting-icons.svg" />
+    <Content Include="app\staticfiles\admin\img\tooltag-add.svg" />
+    <Content Include="app\staticfiles\admin\img\tooltag-arrowright.svg" />
+    <Content Include="app\staticfiles\admin\js\actions.js" />
+    <Content Include="app\staticfiles\admin\js\admin\DateTimeShortcuts.js" />
+    <Content Include="app\staticfiles\admin\js\admin\RelatedObjectLookups.js" />
+    <Content Include="app\staticfiles\admin\js\autocomplete.js" />
+    <Content Include="app\staticfiles\admin\js\calendar.js" />
+    <Content Include="app\staticfiles\admin\js\cancel.js" />
+    <Content Include="app\staticfiles\admin\js\change_form.js" />
+    <Content Include="app\staticfiles\admin\js\core.js" />
+    <Content Include="app\staticfiles\admin\js\filters.js" />
+    <Content Include="app\staticfiles\admin\js\inlines.js" />
+    <Content Include="app\staticfiles\admin\js\jquery.init.js" />
+    <Content Include="app\staticfiles\admin\js\nav_sidebar.js" />
+    <Content Include="app\staticfiles\admin\js\popup_response.js" />
+    <Content Include="app\staticfiles\admin\js\prepopulate.js" />
+    <Content Include="app\staticfiles\admin\js\prepopulate_init.js" />
+    <Content Include="app\staticfiles\admin\js\SelectBox.js" />
+    <Content Include="app\staticfiles\admin\js\SelectFilter2.js" />
+    <Content Include="app\staticfiles\admin\js\theme.js" />
+    <Content Include="app\staticfiles\admin\js\unusable_password_field.js" />
+    <Content Include="app\staticfiles\admin\js\urlify.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\jquery\jquery.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\jquery\jquery.min.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\jquery\LICENSE.txt" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\af.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ar.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\az.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\bg.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\bn.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\bs.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ca.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\cs.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\da.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\de.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\dsb.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\el.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\en.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\es.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\et.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\eu.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\fa.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\fi.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\fr.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\gl.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\he.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\hi.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\hr.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\hsb.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\hu.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\hy.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\id.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\is.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\it.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ja.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ka.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\km.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ko.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\lt.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\lv.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\mk.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ms.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\nb.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ne.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\nl.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\pl.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ps.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\pt-BR.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\pt.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ro.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\ru.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\sk.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\sl.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\sq.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\sr-Cyrl.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\sr.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\sv.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\th.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\tk.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\tr.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\uk.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\vi.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\zh-CN.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\i18n\zh-TW.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\LICENSE.md" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\select2.full.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\select2\select2.full.min.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\xregexp\LICENSE.txt" />
+    <Content Include="app\staticfiles\admin\js\vendor\xregexp\xregexp.js" />
+    <Content Include="app\staticfiles\admin\js\vendor\xregexp\xregexp.min.js" />
+    <Content Include="app\staticfiles\app\css\bootstrap.css" />
+    <Content Include="app\staticfiles\app\css\bootstrap.min.css" />
+    <Content Include="app\staticfiles\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\staticfiles\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\staticfiles\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\staticfiles\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\staticfiles\app\js\bootstrap.js" />
+    <Content Include="app\staticfiles\app\js\bootstrap.min.js" />
+    <None Include="app\staticfiles\app\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\staticfiles\app\js\jquery-1.10.2.js" />
+    <Content Include="app\staticfiles\app\js\jquery-1.10.2.min.js" />
+    <Content Include="app\staticfiles\app\js\jquery-1.10.2.min.map" />
+    <None Include="app\staticfiles\app\js\jquery.validate-vsdoc.js" />
+    <Content Include="app\staticfiles\app\js\jquery.validate.js" />
+    <Content Include="app\staticfiles\app\js\jquery.validate.min.js" />
+    <Content Include="app\staticfiles\app\js\jquery.validate.unobtrusive.js" />
+    <Content Include="app\staticfiles\app\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="app\staticfiles\app\js\modernizr-2.6.2.js" />
+    <Content Include="app\staticfiles\app\js\respond.js" />
+    <Content Include="app\staticfiles\app\js\respond.min.js" />
+    <None Include="app\staticfiles\app\js\_references.js" />
+    <Content Include="app\staticfiles\persian-datepicker\css\persian-datepicker.min.css" />
+    <Content Include="app\staticfiles\persian-datepicker\js\persian-date.min.js" />
+    <Content Include="app\staticfiles\persian-datepicker\js\persian-datepicker.min.js" />
+    <Content Include="app\staticfiles\personel\css\site.css" />
+    <Content Include="app\staticfiles\personel\js\bootstrap.js" />
+    <Content Include="app\static\app\css\bootstrap.css" />
+    <Content Include="app\static\app\css\bootstrap.min.css" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\app\js\bootstrap.js" />
+    <Content Include="app\static\app\js\bootstrap.min.js" />
+    <None Include="app\static\app\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\static\app\js\jquery-1.10.2.js" />
+    <Content Include="app\static\app\js\jquery-1.10.2.min.js" />
+    <Content Include="app\static\app\js\jquery-1.10.2.min.map" />
+    <None Include="app\static\app\js\jquery.validate-vsdoc.js" />
+    <Content Include="app\static\app\js\jquery.validate.js" />
+    <Content Include="app\static\app\js\jquery.validate.min.js" />
+    <Content Include="app\static\app\js\jquery.validate.unobtrusive.js" />
+    <Content Include="app\static\app\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="app\static\app\js\modernizr-2.6.2.js" />
+    <Content Include="app\static\app\js\respond.js" />
+    <Content Include="app\static\app\js\respond.min.js" />
+    <None Include="app\static\app\js\_references.js" />
+    <Content Include="app\static\persian-datepicker\css\persian-datepicker.min.css" />
+    <Content Include="app\static\persian-datepicker\js\persian-date.min.js" />
+    <Content Include="app\static\persian-datepicker\js\persian-datepicker.min.js" />
+    <Content Include="app\static\personel\css\site.css" />
+    <Content Include="app\static\personel\js\bootstrap.js" />
+    <Content Include="template\base.html" />
+    <Content Include="template\home.html" />
+    <Content Include="template\add_personnel.html" />
+    <Content Include="template\personnel_list.html" />
+    <Content Include="personel\__pycache__\admin.cpython-310.pyc" />
+    <Content Include="personel\__pycache__\apps.cpython-310.pyc" />
+    <Content Include="personel\__pycache__\models.cpython-310.pyc" />
+    <Content Include="personel\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="template\about.html" />
+    <Content Include="template\contact.html" />
+    <Content Include="template\index.html" />
+    <Content Include="template\layout.html" />
+    <Content Include="template\login.html" />
+    <Content Include="template\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.html">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

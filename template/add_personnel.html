@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>اضافه کردن پرسنل</title>
+    <style>
+        /* Global RTL styling */
+        body {
+            direction: rtl;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-label input {
+            width: auto;
+            margin-left: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        // Function to toggle instructor-specific fields
+        function toggleInstructorFields() {
+            const instructorCheck = document.getElementById("id_is_instructor");
+            const instructorFields = document.getElementById("instructor_fields");
+            const gradeField = document.getElementById("id_instructors_grade");
+            const rankField = document.getElementById("id_instructors_rank");
+
+            if (instructorCheck.checked) {
+                instructorFields.classList.remove("hidden");
+                gradeField.removeAttribute("disabled");
+                rankField.removeAttribute("disabled");
+            } else {
+                instructorFields.classList.add("hidden");
+                gradeField.setAttribute("disabled", "disabled");
+                rankField.setAttribute("disabled", "disabled");
+            }
+        }
+
+        window.onload = function() {
+            toggleInstructorFields();
+            document.getElementById("id_is_instructor").addEventListener("change", toggleInstructorFields);
+        };
+    </script>
+</head>
+<body>
+    <h1>اضافه کردن پرسنل</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_first_name">نام:</label>
+            <input type="text" id="id_first_name" name="first_name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="id_last_name">نام خانوادگی:</label>
+            <input type="text" id="id_last_name" name="last_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_rank">درجه:</label>
+            <input type="text" id="id_rank" name="rank" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_personnel_number">شماره پرسنلی:</label>
+            <input type="number" id="id_personnel_number" name="personnel_number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_branch">رسته:</label>
+            <input type="text" id="id_branch" name="branch" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_specialty">تخصص:</label>
+            <input type="text" id="id_specialty" name="specialty" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_birth_date">تاریخ تولد:</label>
+            <input type="date" id="id_birth_date" name="birth_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_birth_place">محل تولد:</label>
+            <input type="text" id="id_birth_place" name="birth_place" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_national_id">کد ملی:</label>
+            <input type="text" id="id_national_id" name="national_id" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_hire_date">تاریخ استخدام:</label>
+            <input type="date" id="id_hire_date" name="hire_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_region_entry_date">تاریخ ورود به منطقه:</label>
+            <input type="date" id="id_region_entry_date" name="region_entry_date" required>
+        </div>
+
+        <div class="form-group checkbox-label">
+            <label for="id_is_instructor">آیا نظام مدرسین دارد؟</label>
+            <input type="checkbox" id="id_is_instructor" name="is_instructor">
+        </div>
+
+        <div id="instructor_fields" class="hidden">
+            <div class="form-group">
+                <label for="id_instructors_grade">پایه نظام مدرسین:</label>
+                <input type="text" id="id_instructors_grade" name="instructors_grade" disabled>
+            </div>
+            <div class="form-group">
+                <label for="id_instructors_rank">رتبه نظام مدرسین:</label>
+                <input type="text" id="id_instructors_rank" name="instructors_rank" disabled>
+            </div>
+        </div>
+
+        <button type="submit">ذخیره</button>
+    </form>
+</body>
+</html>

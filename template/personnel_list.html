@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personnel List</title>
+</head>
+<body>
+    <h1>Personnel List</h1>
+    
+    {% if personnel %}
+        <table border="1">
+            <tr>
+                <th>نام</th>
+                <th>نام خانوادگی</th>
+                <th>درجه</th>
+                <th>شماره پرسنلی</th>
+                <th>رسته</th>
+                <th>تخصص</th>
+                <th>تاریخ تولد</th>
+                <th>محل تولد</th>
+                <th>کد ملی</th>
+                <th>تاریخ استخدام</th>
+                <th>تاریخ ورود به منطقه</th>
+                <th>وضعیت نظام مدرسین</th>
+                <th>پایه نظام مدرسین</th>
+                <th>رتبه نظام مدرسین</th>
+            </tr>
+            {% for person in personnel %}
+                <tr>
+                    <td>{{ person.first_name }}</td>
+                    <td>{{ person.last_name }}</td>
+                    <td>{{ person.rank }}</td>
+                    <td>{{ person.personnel_number }}</td>
+                    <td>{{ person.branch }}</td>
+                    <td>{{ person.specialty }}</td>
+                    <td>{{ person.birth_date }}</td>
+                    <td>{{ person.birth_place }}</td>
+                    <td>{{ person.national_id }}</td>
+                    <td>{{ person.hire_date }}</td>
+                    <td>{{ person.region_entry_date }}</td>
+                    <td>{{ person.instructors_status }}</td>
+                    <td>{{ person.instructors_grade }}</td>
+                    <td>{{ person.instructors_rank }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No personnel data available.</p>
+    {% endif %}
+</body>
+</html>
