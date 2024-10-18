@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% load static %}
-
-{% block title %}Home - My Django Application{% endblock %}
-
 {% block content %}
-    <h1>Welcome to the Home Page</h1>
-    <p>This is the content of the home page.</p>
+<h1>Home Page</h1>
+<p>Welcome to the home page. Choose an action below:</p>
+<ul>
+    <li><a href="{% url 'personnel_list' %}">View Personnel List</a></li>
+    <li><a href="{% url 'add_personnel' %}">Add Personnel</a></li>
+</ul>
 {% endblock %}

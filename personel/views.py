@@ -1,16 +1,16 @@
-from django.contrib.auth.mixins import UserPassesTestMixin
-from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView
 from .models import Personnel
 from .forms import PersonnelForm
-from common.views import AdminCreateView  # Assuming AdminCreateView is in common/views.py
-from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import ListView
 
-# Define personnel_list view to list all personnel entries
-def personnel_list(request):
-    personnel = Personnel.objects.all()
-    return render(request, 'personel/personnel_list.html', {'personnel': personnel})
-class AddPersonnelView(AdminCreateView):
+class PersonnelListView(ListView):
+    model = Personnel
+    template_name = 'personel/personnel_list.html'
+    context_object_name = 'personnel'
+
+class PersonnelCreateView(CreateView):
     model = Personnel
     form_class = PersonnelForm
-    success_url = reverse_lazy('personnel_list')
     template_name = 'personel/add_personnel.html'
+    success_url = reverse_lazy('personnel_list')
