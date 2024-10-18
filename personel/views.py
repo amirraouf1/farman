@@ -1,45 +1,16 @@
-"""
-Definition of views.
-"""
-
-from datetime import datetime
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.urls import reverse_lazy
+from .models import Personnel
+from .forms import PersonnelForm
+from common.views import AdminCreateView  # Assuming AdminCreateView is in common/views.py
 from django.shortcuts import render
-from django.http import HttpRequest
 
-def home(request):
-    """Renders the home page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'index.html',  # Updated path since the template is now in the centralized folder
-        {
-            'title': 'Home Page',
-            'year': datetime.now().year,
-        }
-    )
-
-def contact(request):
-    """Renders the contact page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'contact.html',  # Updated path since the template is now in the centralized folder
-        {
-            'title': 'Contact',
-            'message': 'Your contact page.',
-            'year': datetime.now().year,
-        }
-    )
-
-def about(request):
-    """Renders the about page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'about.html',  # Updated path since the template is now in the centralized folder
-        {
-            'title': 'About',
-            'message': 'Your application description page.',
-            'year': datetime.now().year,
-        }
-    )
+# Define personnel_list view to list all personnel entries
+def personnel_list(request):
+    personnel = Personnel.objects.all()
+    return render(request, 'personel/personnel_list.html', {'personnel': personnel})
+class AddPersonnelView(AdminCreateView):
+    model = Personnel
+    form_class = PersonnelForm
+    success_url = reverse_lazy('personnel_list')
+    template_name = 'personel/add_personnel.html'

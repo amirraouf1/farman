@@ -11,10 +11,10 @@ def home(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/index.html',
+        'index.html',  # Adjusted to match the file location in the root 'templates' folder
         {
-            'title':'Home Page',
-            'year':datetime.now().year,
+            'title': 'Home Page',
+            'year': datetime.now().year,
         }
     )
 
@@ -23,11 +23,11 @@ def contact(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/contact.html',
+        'contact.html',  # Adjusted to match the centralized templates folder
         {
-            'title':'Contact',
-            'message':'Your contact page.',
-            'year':datetime.now().year,
+            'title': 'Contact',
+            'message': 'Your contact page.',
+            'year': datetime.now().year,
         }
     )
 
@@ -36,10 +36,10 @@ def about(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/about.html',
+        'about.html',  # Adjusted to match the centralized templates folder
         {
-            'title':'About',
-            'message':'Your application description page.',
-            'year':datetime.now().year,
+            'title': 'About',
+            'message': 'Your application description page.',
+            'year': datetime.now().year,
         }
     )
